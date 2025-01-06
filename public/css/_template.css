@@ -1,0 +1,220 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-height: 175px;
+    --main-minHeight: calc(100vh - var(--header-height) - var(--footer-height));
+    --footer-height: 700px;
+}
+
+body {
+	font-family: Arial;
+}
+
+header {
+    height: var(--header-height);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    
+    padding: 10px 20px;
+    background: linear-gradient(to right, #e8e8e8 0, #fffdfd 100%);
+    box-shadow: 2px 2px 10px 2.5px rgba(0, 0, 0, 0.3);
+}
+
+header .title {
+	color: black;
+	text-decoration: none;
+}
+
+header .title h1 {
+	color: #04abeb;
+}
+
+header .info {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	gap: 5px;
+
+	width: 100%
+}
+
+header .info a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+
+	text-decoration: none;
+	color: black;
+}
+
+header .info a img {
+	width: 30px;
+}
+
+@media only screen and (min-width: 625px) {
+	:root {
+		--header-height: 135px;
+	}
+
+	header .info {
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 0;
+	}
+}
+
+@media only screen and (min-width: 850px) {
+	:root {
+		--header-height: 100px;
+	}
+
+	header {
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 0;
+	}
+
+	header .info {
+		flex-direction: column;
+		justify-content: center;
+		gap: 5px;
+
+		width: fit-content;
+	}
+}
+
+main {
+    min-height: var(--main-minHeight);
+}
+
+footer {
+    height: var(--footer-height);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+	padding: 15px;
+    background-color: #555555;
+    color: white;
+}
+
+footer .owner-info, footer .myla-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+footer .owner-info .contact {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	gap: 5px;
+}
+
+footer .whatsapp-icon {
+	width: 250px;
+}
+
+footer .send-email {
+	text-decoration: none;
+	color: white;
+	background-color: #f52222;
+	border-radius: 10px;
+	padding: 5px 20px;
+	
+	width: 250px;
+	height: 40px;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+footer .send-email img {
+	width: 30px;
+}
+
+footer .send-email span {
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
+}
+
+footer .guide {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	gap: 5px;
+}
+
+footer .guide div {
+	padding: 15px;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	gap: 5px;
+}
+
+footer .guide ul {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	flex-wrap: wrap;
+	
+	width: 100%;
+	max-width: 400px;
+
+	list-style: none;
+}
+
+footer .guide a {
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
+
+footer .myla-info {
+	align-items: center;
+}
+
+footer .myla-info img {
+	height: 100px;
+}
+
+@media only screen and (min-width: 1050px) {
+	:root {
+		--footer-height: 350px;
+	}
+	
+	footer {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0;
+	}
+
+	footer .owner-info, footer .myla-info {
+		align-items: start;
+	}
+}

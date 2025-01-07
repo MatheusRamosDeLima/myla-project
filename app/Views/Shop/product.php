@@ -20,11 +20,31 @@
 		</div>
 	</div>
 	<div class='product-info'>
-		<h1><?= $product->title ?></h1>
-		<p><span class='field'>SKU:</span> <?= $product->sku ?></p>
-		<p><span class='field'>Categoria:</span> <a href='/categoria/<?= $category->addr ?>'><?= ucfirst($category->name) ?></a></p>
-		<div class='desc'>
-			<p><?= $product->description ?></p>
+		<div class='details'>
+			<h1><?= $product->title ?></h1>
+			<p><span class='field'>SKU:</span> <?= $product->sku ?></p>
+			<p><span class='field'>Categoria:</span> <a href='/categoria/<?= $category->addr ?>'><?= ucfirst($category->name) ?></a></p>
+			<div class='desc'>
+				<p><?= $product->description ?></p>
+			</div>
+		</div>
+		<div class='request-quote'>
+			<button onclick='openAdvice()'>Solicitar orçamento</button>
+			<div id='advice' class='advice'>
+				<div class='close-advice' onclick='closeAdvice()'>X</div>
+				<div class='info'>
+					<h2>Selecione uma forma de <span>contato</span></h2>
+					<div class='contact-options'>
+						<a href='https://wa.me/5541999087542'>
+							<img src='/images/icons/whatsapp-blue-outlined.png' width='75px'>
+						</a>
+						<a href='mailto:ronaldoramosim@gmail.com'>
+							<img src='/images/icons/mail-blue.png' width='75px'>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id='blur-background' class='blur-background' onclick='closeAdvice()'></div>
 		</div>
 	</div>
 </section>

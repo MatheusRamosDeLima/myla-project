@@ -20,36 +20,12 @@
 		</div>
 	</div>
 	<div class='product-info'>
-		<div>
-			<h1><?= $product->title ?></h1>
-			<p><span class='field'>SKU:</span> <?= $product->sku ?></p>
-			<p><span class='field'>Categoria:</span> <a href='/categoria/<?= $category->addr ?>'><?= ucfirst($category->name) ?></a></p>
-			<div class='desc'>
-				<p><?= $product->description ?></p>
-			</div>
+		<h1><?= $product->title ?></h1>
+		<p><span class='field'>SKU:</span> <?= $product->sku ?></p>
+		<p><span class='field'>Categoria:</span> <a href='/categoria/<?= $category->addr ?>'><?= ucfirst($category->name) ?></a></p>
+		<div class='desc'>
+			<p><?= $product->description ?></p>
 		</div>
-		<!--
-		<form action='/send_email' method='post'>
-			<div>
-				<div>
-					<input type='text' name='name' placeholder='Nome'>
-				</div>
-				<div>
-					<input type='text' name='whatsapp' placeholder='WhatsApp'>
-				</div>
-				<div>
-					<input type='text' name='qtd' placeholder='Qtd:'>
-				</div>
-				<div>
-					<input type='text' name='product' value='<?= $product->title ?>'>
-				</div>
-				<div>
-					<textarea name='message' placeholder='Message'></textarea>
-				</div>
-			</div>
-			<button>Solicitar orçamento</button>
-		</form>
-		-->
 	</div>
 </section>
 <?php if ($randomProducts): ?>

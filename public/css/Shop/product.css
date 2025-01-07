@@ -10,10 +10,6 @@ main h1 {
 	text-transform: uppercase;
 }
 
-span.field {
-	color: #04abeb;
-}
-
 .main-product {
 	display: flex;
 	flex-direction: column;
@@ -70,17 +66,156 @@ span.field {
 	flex-direction: column;
 	align-items: start;
 	justify-content: center;
-	gap: 10px;
+	gap: 40px;
+}
+
+.product-info .details {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	gap: 8px;
 
 	font-size: 18px;
 }
 
-.product-info a {
+.product-info .details h1 {
+	margin-block: 10px;
+}
+
+.product-info .details .field {
+	color: #04abeb;
+	font-weight: 700;
+}
+
+.product-info .details a {
 	color: #4b0082;
 }
 
 .product-info .desc {
 	padding-block: 10px;
+}
+
+:root {
+	--advice-width: 275px;
+	--advice-height: 300px;
+}
+
+.request-quote button {
+	width: 200px;
+	height: 40px;
+	
+	font-size: 18px;
+	background-color: #00ee55;
+	border: none;
+	box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.36);
+	
+	padding: 5px;
+	margin: 10px;
+}
+
+.request-quote .advice {
+	position: fixed;
+	top: calc(50% - var(--advice-height) / 2);
+	left: calc(50% - var(--advice-width) / 2);
+
+	width: 100vw;
+	max-width: var(--advice-width);
+	height: var(--advice-height);
+
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+
+	display: none;
+}
+
+.request-quote .advice.open {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	justify-content: start;
+	gap: 10px;
+	
+	z-index: 2;
+}
+
+.request-quote .advice .close-advice {
+	padding: 5px;
+	cursor: pointer;
+}
+
+.request-quote .advice .info {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	gap: 10px;
+}
+
+.request-quote .advice .info span {
+	color: #04abeb;
+}
+
+.request-quote .advice .info .contact-options {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	
+	margin: auto;
+}
+
+.request-quote .advice .info .contact-options a {
+	width: 120px;
+	height: 120px;
+	
+	border-radius: 100%;
+	background-color: #dddddd;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.request-quote .blur-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.36);
+	
+	display: none;
+}
+
+.request-quote .blur-background.show {
+	display: block;
+	z-index: 1;
+}
+
+@media only screen and (min-width: 375px) {
+	:root {
+		--advice-width: 350px;
+	}
+
+	.request-quote .advice .info .contact-options {
+		gap: 35px;
+	}
+}
+
+@media only screen and (min-width: 475px) {
+	:root {
+		--advice-width: 450px;
+	}
+
+	.request-quote .advice .info .contact-options {
+		gap: 50px;
+	}
 }
 
 @media only screen and (min-width: 975px) {

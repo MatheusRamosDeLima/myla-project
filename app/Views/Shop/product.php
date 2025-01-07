@@ -52,7 +52,7 @@
 	<div class='separator'></div>
 	<section class='relationed-products'>
 		<h2>Produtos relacionados</h2>
-		<div style='overflow-x: scroll; padding: 30px;'>
+		<div style='overflow-x: scroll;'>
 			<div class='products'>
 				<?php foreach ($randomProducts as $randomProduct): ?>
 					<?php $randomImages = $getImagesByProduct($randomProduct) ?>

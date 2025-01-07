@@ -1,1 +1,1 @@
-<?php require_once '../public/index.php' ?>
+<?php require_once __DIR__.'/../public/index.php' ?>

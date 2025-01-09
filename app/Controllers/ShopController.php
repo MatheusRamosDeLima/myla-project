@@ -31,7 +31,6 @@ class ShopController extends Controller {
     
         $view = new View('Shop/index', 'Loja', 'Shop/index');
         $this->viewWithTemplate($view, [
-        	'categories' => $categories,
         	'randomProducts' => $randomProductsByCategories,
         	'getCategoryByName' => function($name) {
         		return $this->Category->selectByField('name', $name)->fetchObject();
@@ -44,8 +43,6 @@ class ShopController extends Controller {
 	}
 
 	public function category(string $categoryAddr) {
-		$categories = $this->Category->selectAll();
-
 		$categoryFound = $this->Category->selectByField('addr', $categoryAddr)->fetchObject();
 
 		if (!$categoryFound) {
@@ -57,7 +54,6 @@ class ShopController extends Controller {
 		
 		$view = new View('/Shop/category', ucfirst($categoryFound->name), 'Shop/category');
 		$this->viewWithTemplate($view, [
-			'categories' => $categories,
 			'category' => $categoryFound,
 			'products' => $productsByCategory,
 			'getImagesByProduct' => function($product) {
@@ -68,8 +64,6 @@ class ShopController extends Controller {
 	}
 
 	public function product(string $productId) {
-		$categories = $this->Category->selectAll();
-	
 		$product = $this->Product->selectByField('id', $productId)->fetchObject();
 
 		if (!$product) {
@@ -83,14 +77,12 @@ class ShopController extends Controller {
 
 		$productsByCategory = $this->Product->selectByField('category', $category->name)->fetchAll();
 
-		if (count($productsByCategory) > 1) {
-			$randomProducts = $this->Product->getRandomProductInCategoryExcept(4, $category->name, $product->id);
-		}
-		else $randomProducts = [];
+		$randomProducts = [];
+
+		if (count($productsByCategory) > 1) $randomProducts = $this->Product->getRandomProductInCategoryExcept(4, $category->name, $product->id);
 		
 		$view = new View('/Shop/product', $product->title, 'Shop/product', 'Shop/product');
 		$this->viewWithTemplate($view, [
-			'categories' => $categories,
 			'product' => $product,
 			'images' => $images,
 			'category' => $category,

@@ -21,8 +21,6 @@ class HomeController extends Controller {
     }
 
     public function index() {
-		$categories = $this->Category->selectAll();
-
 		$mainCategories = ['bone', 'camiseta', 'camisa-polo', 'camiseta-regata', 'viseira', 'chapeu'];
 		$randomProductsByCategories = [];
 		foreach ($mainCategories as $categoryAddr) {
@@ -34,7 +32,6 @@ class HomeController extends Controller {
     
         $view = new View('home', 'Ronaldo Ramos', 'home', 'home');
         $this->viewWithTemplate($view, [
-        	'categories' => $categories,
         	'randomProducts' => $randomProductsByCategories,
         	'getCategoryByName' => function($name) {
         		$category = $this->Category->selectByField('name', $name)->fetchObject();

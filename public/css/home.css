@@ -1,10 +1,4 @@
-:root {
-	--products-gap: 20px;
-	--product-width: calc(300px * 0.9);
-	--product-height: calc(400px * 0.9);
-
-	--buttons-main-color: #05a5ee;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .myla {
 	display: flex; 
@@ -112,8 +106,10 @@
 
 .shop h2 {
 	font-size: 35px;
-	padding: 10px;
+	font-family: "Poppins", serif;
 	color: #002aaa;
+	text-transform: uppercase;
+	padding: 10px;
 }
 
 .shop .go-to-category, .shop .go-to-category-mobile {
@@ -185,8 +181,10 @@
 	height: calc(var(--product-height) * 0.1);
 }
 
-.div-product-title h2 {
+.div-product-title h3 {
 	font-size: 18px;
+	font-family: "Poppins", serif;
+	font-weight: 700;
 }
 
 @media only screen and (min-width: 500px) {

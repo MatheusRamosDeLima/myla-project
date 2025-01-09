@@ -35,7 +35,7 @@
 				<div class='show-category'>
 					<h2><?= ucfirst($category->name) ?></h2>
 					<?php if ($category->addr): ?>
-						<a href='/categoria/<?= $category->addr ?>' class='go-to-category'>Mais de <?= ucfirst($category->name) ?></a>
+						<a href='/categoria/<?= $category->addr ?>' class='go-to-category'>Ver mais produtos</a>
 					<?php endif ?>
 				</div>
 				<div style='overflow-x: scroll'>

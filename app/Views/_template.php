@@ -82,13 +82,14 @@
     	</div>
     	<div class='myla-info'>
 			<img src='/images/myla/logo-myla.png' alt='Myla'>
-			<div>
+			<div style='display: flex; flex-direction: column; gap: 10px;'>
 				<div>
 					<span>CNPJ:</span>
 					<span>05.866.853/0001-24</span>
 				</div>
-				<div>
+				<div style='display: flex; flex-direction: column; gap: 5px;'>
 					<span>Rua Jaroslau Maistrovicz, 24</span>
+					<span>Apucarana - PR, 86801-600</span>
 				</div>
 			</div>
     	</div>

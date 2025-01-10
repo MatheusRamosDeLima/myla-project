@@ -1,13 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error 404</title>
-</head>
-<body>
-    <h1>Error 404</h1>
-    <p>Page <strong>Not Found</strong></p>
-    <p>Please back to the <a href='/'>home page</a>.</p>
-</body>
-</html>
+<div class='error'>
+	<h1>Página não encontrada</h1>
+	<h2>Erro 404</h2>
+</div>
+<div class='explanation'>
+	<p>Parece que a página que você está tentando acessar não existe ou foi retirada do ar temporariamente...</p>
+	<p>Neste caso, recomenda-se que volte para a <a href='/'>página principal</a>.</p>
+</div>
+<style>
+	.main-content {
+		padding: 40px 20px;
+		width: fit-content;
+		
+		margin: auto;
+
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: center;
+		gap: 20px;
+	}
+
+	.error h1 {
+		font-size: 35px;
+		font-family: "Poppins", serif;
+	}
+
+	.error h2 {
+		font-size: 30px;
+		font-family: "Poppins", serif;
+		text-decoration: underline;
+	}
+
+	.explanation {
+		font-size: 18px;
+		
+		width: 100%;
+		max-width: 600px;
+
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+</style>

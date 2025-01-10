@@ -31,7 +31,8 @@ class Controller {
     }
     public function error404(): void {
         Response::json([], 404);
-        $this->viewWithTemplate('Error/error404');
+        $view = new View('Error/error404', 'Página não encontrada');
+        $this->viewWithTemplate($view);
     }
     public function error405(): void {
         Response::json([], 405);

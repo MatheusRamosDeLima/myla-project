@@ -1,0 +1,11 @@
+title: Viseira com velcro | sku: V16 | category: viseira | description: Viseira em microfibra com regulador velcro, debrum na aba e personalização frontal em silk alto relevo.
+image 0: 402050
+image 1: 26599
+image 2: 30525
+Target dir: /home/matheex/dev/code/projects/myla/admin/controllers/../../public/images/products/
+Validações de imagem: OK
+Imagem criada!
+Validações de imagem: OK
+Imagem criada!
+Validações de imagem: OK
+Imagem criada!
